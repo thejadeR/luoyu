@@ -27,21 +27,30 @@ $(function () {
             for (var i = 0; i < mz_list.length; i++) {
                 var mz_obj = mz_list[i]
                 console.log(mz_obj.img)
-                $('<li><a href="javascript:;"><img src="/static/images2/' + mz_obj.img + '/"><p>' + mz_obj.name + '</p><span>￥' + mz_obj.price + '</span></a></li>').appendTo('#list1')
+                // 本地調試
+                // $('<li><a href="javascript:;"><img src="/static/images2/' + mz_obj.img + '/"><p>' + mz_obj.name + '</p><span>￥' + mz_obj.price + '</span></a></li>').appendTo('#list1')
+                // 上線
+                $('<li><a href="javascript:;"><img src="/static/images2/' + mz_obj.img + ' "><p>' + mz_obj.name + '</p><span>￥' + mz_obj.price + '</span></a></li>').appendTo('#list1')
             }
 
             $('.floor .main .list2').empty()
             for (var j = 0; j < nz1_list.length; j++) {
                 var nz1_obj = nz1_list[j]
                 // console.log(nz1_obj.img)
-                $('<a href="javascript:;" class="cc"><img src="/static/images2/' + nz1_obj.img + '/"></a>').appendTo('.floor .main .list2')
+                  // 本地調試
+                // $('<a href="javascript:;" class="cc"><img src="/static/images2/' + nz1_obj.img + '/"></a>').appendTo('.floor .main .list2')
+                  // 上線
+                 $('<a href="javascript:;" class="cc"><img src="/static/images2/' + nz1_obj.img + ' "></a>').appendTo('.floor .main .list2')
             }
 
             $('#list3').empty()
             for (var k = 0; k < nz2_list.length; k++) {
                 var nz2_obj = nz2_list[k]
                 // console.log(nz2_obj.img)
-                $('<li><a href="javascript:;"><img src="/static/images2/' + nz2_obj.img + '/">' + '<p>' + nz2_obj.name + '</p>' + '<span>￥' + nz2_obj.price + '</span></a></li>').appendTo('#list3')
+                  // 本地調試
+                // $('<li><a href="javascript:;"><img src="/static/images2/' + nz2_obj.img + '/">' + '<p>' + nz2_obj.name + '</p>' + '<span>￥' + nz2_obj.price + '</span></a></li>').appendTo('#list3')
+                  // 上線
+                $('<li><a href="javascript:;"><img src="/static/images2/' + nz2_obj.img + ' ">' + '<p>' + nz2_obj.name + '</p>' + '<span>￥' + nz2_obj.price + '</span></a></li>').appendTo('#list3')
             }
 
             // 用戶信息

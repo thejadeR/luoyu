@@ -102,7 +102,11 @@ $(function() {
                                         //     type:'/get/'
                                         //
                                         // })
-                                        window.open('/?token=' + token, target = '_self')
+                                        // window.open('/?token=' + token, target = '_self')
+                                        // 本地調試
+                                        // location.href='127.0.0.1/login/?token=' + token
+                                        // 上線
+                                        location.href='120.78.222.145/login/?token=' + token
                             }
 
                             })

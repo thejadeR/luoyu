@@ -68,7 +68,13 @@ class RegisterR(Resource):
             db.session.commit()
             cache.set(u.token, u.name, timeout=300)
             msg = Message(subject='jade邮箱激活', sender='jade1056497498@163.com', recipients=[email])
-            msg.html = render_template('emailactivecheck.html', the_url='http://127.0.0.1:5001/check_email_active/?token={}'.format(u.token))
+
+            # 本地調試
+            # msg.html = render_template('emailactivecheck.html',the_url='http://127.0.0.1:5000/check_email_active/?token={}'.format(u.token))
+
+
+            # 上線
+            msg.html = render_template('emailactivecheck.html', the_url='http://120.78.222.145:8000/check_email_active/?token={}'.format(u.token))
             mail.send(msg)
 
         except Exception as e:
