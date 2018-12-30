@@ -14,7 +14,7 @@ def appname():
 
     app = Flask(__name__,static_folder=s,template_folder=t)
     app.register_blueprint(blueprint=blue)
-    app.config.from_object(env.get('develop'))
+    app.config.from_object(env.get('product'))
     init_exts(app)
 
     return app
